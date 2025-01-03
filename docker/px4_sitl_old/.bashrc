@@ -101,6 +101,7 @@ fi
 # ROS-related
 export ROS_DISTRO="noetic"
 source /opt/ros/noetic/setup.bash
+source /ros_ws/devel/setup.bash 
 
 # Set DRONE_ID here
 # export DRONE_ID=0
@@ -129,5 +130,6 @@ source /opt/ros/noetic/setup.bash
 # export ROS_IP=$SELF_IP
 
 # Convenience function
+alias cd_scripts="cd /ros_ws/src/PX4-SITL-Docker/gestelt_bringup/scripts"
 alias killbill="killall -9 rosmaster; tmux kill-server;"
 

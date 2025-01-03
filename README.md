@@ -28,6 +28,10 @@ docker run -it --privileged --network host --rm gestelt/px4_sitl_gz:latest
 docker start <container_id>
 # Start additional bash sessions in same container
 docker exec -it <container_id> bash
+# Stop all containers
+docker stop $(docker ps -a -q)
+# Remove all containers
+docker rm $(docker ps -a -q)
 ```
 
 ## Save containers as new images
@@ -40,5 +44,10 @@ docker commit CONTAINER_NAME gestelt/px4_sitl_gz:latest
 docker push gestelt/px4_sitl_gz:latest
 # Inspect the container
 docker container inspect CONTAINER_NAME
+```
+
+## Tagging
+```bash
+docker tag gestelt/px4_sitl_gz:base gestelt/px4_sitl_gz:latest
 ```
 
