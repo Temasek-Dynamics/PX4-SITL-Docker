@@ -44,7 +44,7 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$gestelt_bringup_DIR:$PX4_AUTOPILOT_RE
 #####
 # Start Gazebo and PX4 SITL instances
 CMD_0="
-roslaunch gestelt_bringup mavros_posix_sitl.launch 
+roslaunch gestelt_bringup posix_sitl_1drone.launch 
 "
 
 # disarm drone
